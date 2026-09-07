@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD231 Home Page">
+    <meta name="author" content="Elizabeth">
+    <title>WDD231 Home</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!--- Style sheet proper arrangement when using normalize.css, the normalize link comes first--->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+
+    <!--- Javascript --->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Logo" width="16" height="16">
+        <span>Quinlzbeth's Barbershop</span>
+        <button id="ham-btn" class="hamburger" ></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1 class="container">Home</h1>
+        <section class="about">
+            <h2>About Me</h2>
+            <p>Welcome to my WDD231 home page.</p>
+        </section>
+
+        <section class="photo">
+            <h2>Student Photo</h2>
+            <img src="images/student.jpg" alt="Student Photo" width="125">
+        </section>
+
+        <section class= "courses container">
+            <h2>Certificate Courses</h2>
+                    
+            <div id="courseButtons">             <button id="allBtn">All</button>         <button       id="wddBtn">WDD</button>         <button id="cseBtn">CSE </button>
+            </div>
+
+            <div id="courseContainer">
+            </div>
+
+            <p>Total Credits: <span id="totalCredits"></span></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://www.facebook.com/elizabeth.shonibare.5" target="_blank"><img src="images/facebook.svg" alt="" width="16" height="16"></a>
+            <a href="#" target="_blank"><img src="images/github.svg" alt="" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/elizabeth-shonibare-05a64a3a4" target="_blank"><img src="images/linkedin.svg" alt="" width="16" height="16"></a>
+        </div>
+        <p>©<span id="year"></span> Elizabeth | Nigeria </p>
+        <p id="lastModified"></p>
+    </section> last modify</p>
+    </footer>
+</body>
+</html>

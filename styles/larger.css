@@ -1,0 +1,32 @@
+@media screen and (min-width:320px) {
+    header, main, nav, footer{
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /***** HAMBURGER *****/
+        .hamburger.show{            display: none;
+    }
+
+    /***** NAVIGATION *****/
+    .navigation {
+            display: block;
+            
+        }
+
+                main {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr ;
+                            
+    }
+
+        .container {
+            grid-column: 1 /4;
+        }
+
+
+    
+}
+
+
+

@@ -1,0 +1,128 @@
+/***** SITE WIDE *****/
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+/***** HEADER *****/
+header {
+    display: grid;
+    grid-template-columns: 100px auto 44px;
+    align-items: center;
+    padding: 10px 0 10px 10px;
+    border-bottom: solid 1px;
+    column-gap: 10px;
+}
+
+header img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header span{
+    font-size: 1.5rem;
+    /* color: ; */
+}
+
+/****** HAMBURGER NAVIGATION ****/
+.hamburger{
+    background: none;
+    border: none;
+    /* color: ; */
+    cursor: pointer;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+
+.hamburger::after {
+    content: "\2630";
+    font-size: 2rem;
+}
+
+.hamburger.show::after {
+    content: "\00D7";
+}
+
+/***** NAVIGATION *****/
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav {
+    background-color:rgb(70 83 107 / 100%);
+    
+    a {
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: #0bfe0f;
+    }
+
+    .active {
+        color: yellow;
+    } 
+}
+
+main{
+    display: block;
+    padding: 1rem;
+}
+
+h2, h3{
+    text-align: center;    
+    background-color: rgb(70 83 107 / 100%);
+    color: #fff ;
+}
+
+section{
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+
+
+/***** FOOTER *****/
+footer{
+    background-color: rgb(70 83 107 / 100%);
+    padding: 1rem 10px;
+    text-align: center;
+    
+}
+.social{
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+.social a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: black solid 1px;
+    border-radius: 22px;
+}
+.social img{
+    width: 22px;
+    height: 22px;
+}
+.social a:hover{
+    background-color: #0bfe0f;
+}
