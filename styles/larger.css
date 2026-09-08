@@ -10,8 +10,7 @@
 
     /***** NAVIGATION *****/
     .navigation {
-            display: block;
-            
+            display: none;
         }
 
                 main {
