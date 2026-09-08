@@ -26,5 +26,3 @@ document.getElementById("wddBtn").addEventListener("click", () => displayCourses
 document.getElementById("cseBtn").addEventListener("click", () => displayCourses(courses.filter(c => c.code.startsWith("CSE"))));
 
 displayCourses(courses);
-
-
