@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Sunrise Retail",
+        "address": "123 Market Street, Port Harcourt",
+        "phone": "+234-555-1010",
+        "website": "https://sunriseretail.com",
+        "image": "sunrise.jpg",
+        "membership": 1,
+        "info": "Local retail store specializing in household goods."
+    },
+    {
+        "name": "TechNova Solutions",
+        "address": "45 Innovation Drive, Port Harcourt",
+        "phone": "+234-555-2020",
+        "website": "https://technova.com",
+        "image": "technova.jpg",
+        "membership": 3,
+        "info": "Gold member offering IT consulting and software development."
+    },
+    {
+        "name": "GreenLeaf Farms",
+        "address": "78 Agro Lane, Rivers State",
+        "phone": "+234-555-3030",
+        "website": "https://greenleaffarms.com",
+        "image": "greenleaf.jpg",
+        "membership": 2,
+        "info": "Silver member producing organic vegetables."
+    },
+    {
+        "name": "Oceanic Logistics",
+        "address": "12 Dockyard Road, Port Harcourt",
+        "phone": "+234-555-4040",
+        "website": "https://oceaniclogistics.com",
+        "image": "oceanic.jpg",
+        "membership": 1,
+        "info": "Member company providing shipping and logistics services."
+    },
+    {
+        "name": "Bright Future Academy",
+        "address": "9 Education Avenue, Port Harcourt",
+        "phone": "+234-555-5050",
+        "website": "https://brightfutureacademy.com",
+        "image": "brightfuture.jpg",
+        "membership": 2,
+        "info": "Silver member private school focused on STEM education."
+    },
+    {
+        "name": "Riverside Bank",
+        "address": "100 Finance Street, Port Harcourt",
+        "phone": "+234-555-6060",
+        "website": "https://riversidebank.com",
+        "image": "riverside.jpg",
+        "membership": 3,
+        "info": "Gold member financial institution offering banking services."
+    },
+    {
+        "name": "Creative Media Hub",
+        "address": "55 Studio Road, Port Harcourt",
+        "phone": "+234-555-7070",
+        "website": "https://creativemediahub.com",
+        "image": "creative.jpg",
+        "membership": 1,
+        "info": "Member company specializing in digital marketing and design."
+    }
+]
