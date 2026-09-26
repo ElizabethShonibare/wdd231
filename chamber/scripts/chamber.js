@@ -46,5 +46,52 @@ async function loadMembers() {
     }
 }
 
+// scripts/weather.js
+const apiKey = "YOUR_API_KEY";
+const city = "Port Harcourt";
+const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
+
+async function getWeather() {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    const current = data.list[0];
+    const forecast = data.list.slice(1, 4);
+
+    document.getElementById("weather-data").innerHTML = `
+    <p>Current: ${current.main.temp}°C, ${current.weather[0].description}</p>
+    <p>Tomorrow: ${forecast[0].main.temp}°C</p>
+    <p>Day 2: ${forecast[1].main.temp}°C</p>
+    <p>Day 3: ${forecast[2].main.temp}°C</p>
+  `;
+}
+
+
+// scripts/spotlights.js
+async function loadSpotlights() {
+    const response = await fetch("data/members.json");
+    const members = await response.json();
+
+    const goldSilver = members.filter(m => m.membership === 2 || m.membership === 3);
+    const randomSpotlights = goldSilver.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+    const container = document.getElementById("spotlight-container");
+    randomSpotlights.forEach(m => {
+        container.innerHTML += `
+      <div class="card">
+        <img src="${m.logo}" alt="${m.name} logo">
+        <h3>${m.name}</h3>
+        <p>${m.address}</p>
+        <p>${m.phone}</p>
+        <a href="${m.website}" target="_blank">Visit Website</a>
+        <p>Membership: ${m.membership}</p>
+      </div>
+    `;
+    });
+}
+loadSpotlights();
+
+
 // Call the function to load members
 loadMembers();
+getWeather();

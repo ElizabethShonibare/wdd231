@@ -1,3 +1,13 @@
+@media (min-width: 768px) {
+
+    .events,
+    .spotlights {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
 /* Reset basic styles */
 body {
     font-family: Arial, sans-serif;
@@ -119,4 +129,33 @@ nav ul li a {
 .gold .membership-label {
     background-color: #d4af37;
     color: black;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cta-btn {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #008751;
+    /* Nigerian green */
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.cta-btn:hover {
+    background: orange;
 }
