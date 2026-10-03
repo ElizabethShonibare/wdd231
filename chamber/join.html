@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Welcome to the Port Harcourt Chamber of Commerce — connecting businesses, fostering growth, and promoting economic development across Rivers State, Nigeria.">
+    <meta name="author" content="Elizabeth Shonibare">
+    <title>Chamber:Join</title>
+
+    <!-- Facebook Open Graph Meta -->
+    <meta property="og:title" content="Chamber Join">
+    <meta property="og:description"
+        content="Welcome to the Port Harcourt Chamber of Commerce — connecting businesses, fostering growth, and promoting economic development across Rivers State, Nigeria.">
+    <meta property="og:image" content="https://mychamberwebsite.com/images/social-preview.jpg">
+    <meta property="og:url" content="https://mychamberwebsite.com/index.html">
+    <title>Review:Join Port Harcourt Chamber Of Commerce
+    </title>
+
+
+    <link href="https://fonts.googleapis.com/..." rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/chamber.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Membership Application Form</h1>
+        
+            <form method="get" action="thankyou.html">
+                <!-- First Name -->
+                <label>
+                    First Name:
+                    <input type="text" name="firstName" title="Applicant's First Name" autocomplete="given-name" required>
+                </label>
+        
+                <!-- Last Name -->
+                <label>
+                    Last Name:
+                    <input type="text" name="lastName" title="Applicant's Last Name" autocomplete="family-name" required>
+                </label>
+        
+                <!-- Organizational Title -->
+                <label>
+                    Organizational Title:
+                    <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title"
+                        pattern="[A-Za-z\\-\\s]{7,}">
+                </label>
+        
+                <!-- Email -->
+                <label>
+                    Email:
+                    <input type="email" name="email" title="Email Address" autocomplete="email" required
+                        placeholder="example@domain.com">
+                </label>
+        
+                <!-- Mobile Phone -->
+                <label>
+                    Mobile Phone:
+                    <input type="tel" name="mobile" title="Mobile Phone Number" autocomplete="tel" required>
+                </label>
+        
+                <!-- Organization Name -->
+                <label>
+                    Organization Name:
+                    <input type="text" name="organization" title="Organization Name" autocomplete="organization" required>
+                </label>
+        
+                <!-- Membership Level -->
+                <label>
+                    Membership Level:
+                    <select name="membership" title="Membership Level" required>
+                        <option value="np">NP Membership (Non-Profit)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+        
+                <!-- Organization Description -->
+                <label>
+                    Organization Description:
+                    <textarea name="description" title="Organization Description"></textarea>
+                </label>
+        
+                <!-- Timestamp -->
+                <input type="hidden" name="timestamp" id="timestamp">
+        
+                <!-- Submit -->
+                <input class="submit-btn" type="submit" value="Submit Application">
+            </form>
+        
+            <!-- Membership Cards -->
+            <section class="membership-cards">
+                <div class="card">
+                    <h2>NP Membership</h2>
+                    <a href="#npModal">Learn More</a>
+                </div>
+                <div class="card">
+                    <h2>Bronze Membership</h2>
+                    <a href="#bronzeModal">Learn More</a>
+                </div>
+                <div class="card">
+                    <h2>Silver Membership</h2>
+                    <a href="#silverModal">Learn More</a>
+                </div>
+                <div class="card">
+                    <h2>Gold Membership</h2>
+                    <a href="#goldModal">Learn More</a>
+                </div>
+            </section>
+
+            <!-- Modals -->
+            <div id="npModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="npTitle" aria-describedby="npDesc">
+                <div class="modal-content" tabindex="0">
+                    <h3 id="npTitle">NP Membership Benefits</h3>
+                    <p id="npDesc">No fee, access to community events, networking opportunities.</p>
+                    <button onclick="closeModal('npModal')">Close</button>
+                </div>
+            </div>
+
+            <div id="bronzeModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="npTitle" aria-describedby="npDesc">
+                <div class="modal-content" tabindex="0">
+                    <h3 id="npTitle">Bronze Membership Benefits</h3>
+                    <p id="npDesc">Discounted events, basic advertising, training sessions.</p>
+                    <button onclick="closeModal('bronzeModal')">Close</button>
+                </div>
+            </div>
+
+            <div id="silverModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="npTitle" aria-describedby="npDesc">
+                <div class="modal-content" tabindex="0">
+                    <h3 id="npTitle">Silver Membership Benefits</h3>
+                    <p id="npDesc">Event discounts, spotlight advertising, advanced training.</p>
+                    <button onclick="closeModal('silverModal')">Close</button>
+                </div>
+            </div>
+            
+            <div id="goldModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="npTitle" aria-describedby="npDesc">
+                <div class="modal-content" tabindex="0">
+                    <h3 id="npTitle">Gold Membership Benefits</h3>
+                    <p id="npDesc">Exclusive events, premium advertising, maximum discounts.</p>
+                    <button onclick="closeModal('goldModal')">Close</button>
+                </div>
+            </div>
+
+    </main>
+
+    <footer>
+        <p>Contact: info@businesschamber.com | (+234) 807-502-0299</p>
+        <p>Elizabeth Shonibare| WDD 231</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+
+</html>

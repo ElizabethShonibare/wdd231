@@ -13,6 +13,38 @@ document.getElementById("list").addEventListener("click", () => {
     directory.classList.remove("grid");
 });
 
+
+// thankyou.html 
+const params = new URLSearchParams(window.location.search);
+const output = document.getElementById("output");
+
+const fields = ["firstName", "lastName", "email", "mobile", "organization", "timestamp"];
+fields.forEach(field => {
+    const value = params.get(field);
+    if (value) {
+        const p = document.createElement("p");
+        p.textContent = `${field}: ${value}`;
+        output.appendChild(p);
+    }
+});
+
+
+// Set timestamp when form loads
+document.getElementById("timestamp").value = new Date().toISOString();
+
+// Modal functions
+function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+}
+document.querySelectorAll(".card a").forEach(link => {
+    link.addEventListener("click", e => {
+        e.preventDefault();
+        const modalId = link.getAttribute("href").substring(1);
+        document.getElementById(modalId).style.display = "block";
+    });
+});
+
+
 // Fetch and display members
 async function loadMembers() {
     try {
