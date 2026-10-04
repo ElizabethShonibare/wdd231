@@ -33,9 +33,51 @@ fields.forEach(field => {
 document.getElementById("timestamp").value = new Date().toISOString();
 
 // Modal functions
+function openModal(id) {
+    const modal = document.getElementById(id);
+    modal.style.display = "block";
+
+    // Focus the modal content for keyboard users
+    const content = modal.querySelector(".modal-content");
+    content.focus();
+
+    // Trap focus inside modal
+    document.addEventListener("keydown", function trapFocus(e) {
+        if (e.key === "Tab") {
+            const focusable = modal.querySelectorAll("button, a, input, textarea");
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
+        }
+        // Close modal with Escape key
+        if (e.key === "Escape") {
+            closeModal(id);
+            document.removeEventListener("keydown", trapFocus);
+        }
+    });
+}
+
 function closeModal(id) {
     document.getElementById(id).style.display = "none";
 }
+
+// Update event listeners
+document.querySelectorAll(".card a").forEach(link => {
+    link.addEventListener("click", e => {
+        e.preventDefault();
+        const modalId = link.getAttribute("href").substring(1);
+        openModal(modalId);
+    });
+});
+
+
 document.querySelectorAll(".card a").forEach(link => {
     link.addEventListener("click", e => {
         e.preventDefault();
