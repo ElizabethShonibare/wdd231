@@ -168,15 +168,13 @@ form {
     font-weight: bold;
 }
 
-label {
-    margin-bottom: 2em;
-}
 
 label {
     display: block;
     font-size: .8rem;
     color: purple;
     padding-top: .2rem;
+    margin-bottom: 2em;
 }
 
 h3 {
