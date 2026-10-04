@@ -68,6 +68,15 @@ function closeModal(id) {
     document.getElementById(id).style.display = "none";
 }
 
+// Close buttons
+document.querySelectorAll(".close-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const modalId = btn.getAttribute("data-modal");
+        closeModal(modalId);
+    });
+});
+
+
 // Update event listeners
 document.querySelectorAll(".card a").forEach(link => {
     link.addEventListener("click", e => {
