@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore our chamber members and businesses, with quality services and all round satisfaction">
+    <meta name="description"
+        content="Welcome to the Port Harcourt Chamber of Commerce — connecting businesses, fostering growth, and promoting economic development across Rivers State, Nigeria.">
     <meta name="author" content="Elizabeth Shonibare">
-    <title>Chamber:Directory Port Harcourt Chamber Of Commerce</title>
+    <title>Review:Join Port Harcourt Chamber Of Commerce</title>
 
-    <!-- Open Graph Meta -->
-    <meta property="og:title" content="Chamber Directory">
-    <meta property="og:description" content="Explore our chamber members and businesses, with quality services and all round satisfaction">
+    <!--  Open Graph Meta -->
+    <meta property="og:title" content="Chamber of commerce">
+    <meta property="og:description"
+        content="Join the Port Harcourt Chamber of Commerce — connecting businesses, fostering growth, and promoting economic development across Rivers State, Nigeria.">
     <meta property="og:image" content="https://elizabethshonibare.github.io/images/placeholder.png">
     <meta property="og:url" content="https://elizabethshonibare.github.io/">
-    
+
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,14 +27,16 @@
     <!-- CSS Links -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
 
-    <script src="scripts/chamber.js" defer></script>
+    <!-- <script src="scripts/chamber.js" type="module"></script> -->
+    <script src="data/discover.mjs"></script> 
 </head>
 
 <body>
 
-    <header>     
+    <header>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -44,20 +48,13 @@
     </header>
 
     <main>
-        <h1>Business Chamber</h1>
 
-
-        <div class="view-toggle">
-            <button id="grid">Grid</button>
-            <button id="list">List</button>
-        </div>
-    
-        <div id="directory" class="grid">
-            <div class="member-card">
-                <img src="images/member1.jpg" alt="Member Name">
-                
-            </div>
-        </div>
+        <div id="visit-message"></div>
+        
+        <section class="discover-grid" id="discover-container">
+            <!-- Cards will be injected here -->
+        </section>
+        
     </main>
 
     <footer>
@@ -67,5 +64,5 @@
     </footer>
 
 </body>
-</html>
 
+</html>

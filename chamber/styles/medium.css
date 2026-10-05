@@ -1,0 +1,16 @@
+/* Medium screens */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+    
+    figure img:hover {
+        filter: brightness(80%);
+        transform: scale(1.05);
+        transition: all 0.8s ease;
+    }
+}
