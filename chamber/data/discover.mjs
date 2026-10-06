@@ -37,9 +37,9 @@ export const items = [
     },
     {
         "title": "Delakore Art Center",
-        "image": "delakore.webp",
+        "image": "delaroke.webp",
         "address": "Bonny Island, Rivers State",
-        "description": "A scenic island known for its beaches, cultural festivals, and oil industry significance."
+        "description": "A scenic art studio known for its cultural paintings."
     },
     {
         "title": "Port Harcourt Tourist Beach",
