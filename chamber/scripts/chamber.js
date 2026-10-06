@@ -2,7 +2,10 @@
 // Auto last modified date
 // ======================
 // Auto last modified date
-document.getElementById("lastModified").textContent = document.lastModified;
+const lastModifiedEl = document.getElementById("lastModified");
+if (lastModifiedEl) {
+    lastModifiedEl.textContent = document.lastModified;
+}
 
 // ======================
 // Toggle between grid and list views
@@ -203,11 +206,12 @@ async function loadSpotlights() {
 // ======================
 // Discover page cards
 // ======================
-import { items } from "./data/discover.mjs";
+import { items } from "../data/discover.mjs";
 
-const discoverContainer = document.getElementById("discover-container");
-if (discoverContainer) {
-    items.forEach(item => {
+// Build discover cards dynamically
+const container = document.getElementById("discover-container");
+if (container) {
+    items.forEach((item, index) => {
         const card = document.createElement("div");
         card.classList.add("card");
         card.innerHTML = `
@@ -219,9 +223,9 @@ if (discoverContainer) {
       <p>${item.description}</p>
       <button>Learn More</button>
     `;
-        discoverContainer.appendChild(card);
+        container.appendChild(card);
     });
-}
+}    
 
 // ======================
 // Visitor message logic
