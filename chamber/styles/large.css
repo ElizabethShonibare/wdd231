@@ -1,5 +1,5 @@
 /* Larger screen adjustments */
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
     nav ul {
         flex-direction: row;
         justify-content: center;
@@ -24,5 +24,23 @@
         grid-template-areas:
         "card1 card2 card3 card4"
         "card5 card6 card7 card8";
+        }
+
+    .join-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+        }
+    
+    form {
+        justify-self: center;
+        
+        /* keeps form aligned nicely */
+        }
+    
+    .membership-cards {
+        flex-direction: column;
+        /* stack vertically */
         }
 }

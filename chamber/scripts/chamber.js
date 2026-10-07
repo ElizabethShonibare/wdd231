@@ -107,6 +107,7 @@ document.querySelectorAll(".card a").forEach(link => {
     });
 });
 
+
 // ======================
 // Fetch and display members
 // ======================

@@ -1,4 +1,17 @@
-@media (min-width: 768px) {
+@media (max-width: 640px) {
+
+    /* #menu-toggle {
+            display: block;
+        } */
+    
+        #nav-menu {
+            display: none;
+            flex-direction: column;
+        }
+    
+        #nav-menu.open {
+            display: flex;
+        }
 
     .events,
     .spotlights {
@@ -14,6 +27,13 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.5;
+}
+
+body,
+main,
+form,
+.thankyou-container {
+    padding: 1rem;
 }
 
 header, h1, 
@@ -60,6 +80,8 @@ nav ul li a {
 .view-toggle button:hover {
     background-color: #0099cc;
 }
+
+
 
 /* Directory styles */
 #directory {
@@ -165,7 +187,7 @@ nav ul li a {
 form {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    align-items: center;
     font-weight: bold;
 }
 
@@ -355,4 +377,10 @@ figure img {
     padding: 1rem;
     background: #f0f0f0;
     border-left: 4px solid #0077cc;
+}
+
+.thankyou-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem;
 }
